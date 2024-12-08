@@ -1,0 +1,837 @@
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* esto es para resetear todos los estilos existentes*/
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background: #000;
+  height: 100%;
+}/*para declarar que vamos a usar principalmente esta fuente*/
+
+
+
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+          circle farthest-side at 0% 50%,
+          #282828 23.5%,
+          rgba(255, 170, 0, 0) 0
+        )
+        21px 30px,
+      radial-gradient(
+          circle farthest-side at 0% 50%,
+          #2c3539 24%,
+          rgba(240, 166, 17, 0) 0
+        )
+        19px 30px,
+      linear-gradient(
+          #282828 14%,
+          rgba(240, 166, 17, 0) 0,
+          rgba(240, 166, 17, 0) 85%,
+          #282828 0
+        )
+        0 0,
+      linear-gradient(
+          150deg,
+          #282828 24%,
+          #2c3539 0,
+          #2c3539 26%,
+          rgba(240, 166, 17, 0) 0,
+          rgba(240, 166, 17, 0) 74%,
+          #2c3539 0,
+          #2c3539 76%,
+          #282828 0
+        )
+        0 0,
+      linear-gradient(
+          30deg,
+          #282828 24%,
+          #2c3539 0,
+          #2c3539 26%,
+          rgba(240, 166, 17, 0) 0,
+          rgba(240, 166, 17, 0) 74%,
+          #2c3539 0,
+          #2c3539 76%,
+          #282828 0
+        )
+        0 0,
+      linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0
+        #282828;
+    background-size: 40px 60px;
+}/*Hemos elegido esto para en el caso de que haya un error cargando fondos que haya un diseño */
+  
+body{
+  margin: none;
+}
+ 
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #071729;
+  border-bottom: 2px solid #113a5c ;
+  margin: none;
+}
+
+  .logo{
+    display: flex;
+    align-items: center;
+   
+  }/*para ajustar el logo*/
+  span.Titulo{
+    color:white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 200%;
+
+  }/*para ajustar el titulo de la empresa al lado del logo*/
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0a0511;
+    border-bottom: 2px solid #113a5c ;
+    margin: none;
+    
+  }/* para ajustar la barra de navegacion y sus contenidos*/
+
+  .nav-links a{
+    text-decoration: none;
+    padding: 10px;
+    height: 100%;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover{
+    color: #ffae00;
+  }/*para ajustar el texto y generar una pequeña animación a la hora de poner el boton encima*/
+
+  a.actual-position{
+    text-decoration:none;
+    padding: 10px;
+    height: 100%;
+    color: #00ccff;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  a.actual-position:hover{
+    color: white;
+  }
+
+  .main-content{
+
+    background: linear-gradient( rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75),rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/backgound_index.jpg) no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    text-align: center;
+  }/*para hacer que la imagen se ajuste automaticamente independientemente del tamaño de la pantalla y que tenga un degradado*/
+
+  .main-tienda{
+
+    background: rgba(92, 195, 255, 0.144);
+    min-height: 90vh;
+    max-height: max-content;
+    display: flex;
+    align-items:start;
+    text-align: center;
+  }/*para hacer que la imagen se ajuste automaticamente independientemente del tamaño de la pantalla y que tenga un degradado*/
+
+  .main-comunidad{
+
+    background: rgb(0, 0, 0);
+    padding: 2rem;
+    min-height: 90vh;
+    max-height: max-content;
+    align-items: center;
+
+  }/*comunidad de la pagina*/
+
+  .main-sobrenosotros{
+    background: linear-gradient( rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75),rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/backgroun5.gif) no-repeat center center/cover;
+    background-size: cover;
+    min-height: 90vh;
+    max-height: max-content;
+    text-align: center;
+    background: 100;
+
+  }
+
+  .main-trabajo{
+    background: linear-gradient( rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75),rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/backgroun2.gif) no-repeat center center/cover;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    text-align: center;
+    background: 100;
+    margin: 0px;
+  
+  }
+
+   
+  .main-Eventos {
+    background: url(../images/273018.jpg) no-repeat center center/cover; /* Ruta a tu imagen de fondo  '273018.jpg'*/
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Asegura que los cuadros no se envuelvan en una nueva línea */
+  }
+  
+
+
+
+
+  .texto-section{
+    margin-top: 7%;
+    
+  }
+
+  .texto-section h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .cta-button{
+    background: #cf6f15;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5%;
+    transition: backgroud 0.3 ease;
+  }
+
+  .cta-button:hover{
+    background: #eb924a;
+  }
+
+
+  /*Toda esta rama de efectos es para un boton, genera como el efecto glitch y lo he implementado
+  por probar algo distinto.*/
+  a.Effect{
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a.Effect ::after{
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a.Effect::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'Entra a nuestra comunidad';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  a.Effect:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+  
+  a.Effect:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+  
+  a.Effect:hover {
+    background-color: orange;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  /*Aqui termina la rama de efectos de un boton*/
+.info-section{
+  display: flex;
+  justify-content: space-evenly;
+  background: #000;
+  padding: 20px 0;
+  border-top: 2px solid #113a5c;
+}
+
+.info.box{
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  border-left: 1px solid #113a5c;
+  
+}
+.info-box:first-child{
+  border-left: none;
+}
+
+.info-box a{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.info-box a:hover{
+  color: #ffae00;
+}
+
+
+/*Inicio de subir curriculum*/
+.form-box {
+  margin-top:40px;
+  position: relative;
+  width: 500px;
+  height: 550px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus ~ label {
+  top: -5px;
+}
+input:valid ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.inputbox input[type="file"]{
+  opacity: 0;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+
+/*Fin de subir curriculum*/
+
+.aboutus{
+  text-align: left;
+}
+.aboutus-text{
+  text-align: left;
+}
+.aboutus-image{
+  image-rendering: auto;
+}
+
+/*Aqui empiezan elementos adicionales de la tienda*/
+.Productos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+div.Producto {
+ 
+  width: 200px;
+  height: 250px;
+  margin: 1.5%;
+  display: grid;
+ 
+}
+.ImagenProducto img{
+  width: 100%;
+  height: 100%;
+}
+
+.tituloProducto{
+  margin-bottom: 0%;
+}
+
+/**/
+
+
+a.tienda{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  display: grid;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+  border-radius: 5px;
+}
+.cover-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.wrapper{
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.card:hover .wrapper{
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+.wrapper::before,
+.wrapper::after{
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+}
+.wrapper::before{
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5)68%,
+      rgba(12, 13, 19) 97%
+  );
+  border-radius: 5px;
+}
+.wrapper::after{
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19)97%
+  );
+  border-radius: 5px;
+}
+.card:hover .wrapper::before,
+.wrapper::after{
+  opacity: 1;
+}
+.card:hover .wrapper::after{
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+.gradient-background {
+  background: linear-gradient(100deg,#2c128a,#250520,#830505);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Estilo general para la sección */
+
+
+/* Efecto de partículas */
+
+/* Aqui acaba tienda*/
+
+
+/* Aqui empieza comunidad*/
+.comunidad-contenido{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comunidad-item{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  min-height: 35vh;
+  max-height: max-content;
+}
+.comunidad-item h2{
+  color: #ffae00;
+  font-size: 1.8rem;
+  color: #ffae00;
+  margin: 1rem;
+}
+.comunidad-item ul{
+  list-style: none;
+  padding: 25px;
+}
+.comunidad-item ul li{
+  margin-bottom: 1rem;
+}
+
+.comunity-image{
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+.comunity-text{
+  max-width: 600px;
+}
+
+
+
+/* Título */
+.sobre-nosotros h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  color: white; /* Azul neón */
+}
+
+.sobre-nosotros h1::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #0062ff; /* Azul neón */
+  bottom: -10px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.sobre-nosotros h1:hover::after {
+  width: 0;
+}
+
+/* Texto */
+.sobre-nosotros p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  transition: color 0.5s;
+  z-index: 2;
+  position: relative;
+}
+
+.sobre-nosotros p:hover {
+  color: #ffb482;
+}
+
+
+.sobre-nosotros {
+  
+  padding: 50px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  position: relative;
+
+}
+
+/* Efecto de difuminado dinámico */
+.difuminado {
+  background: linear-gradient(135deg, #e24c0c, #1e1e1e);
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+  z-index: 2;
+  position: relative;
+  margin-top: 25px;
+}
+
+.difuminado:hover {
+  background: linear-gradient(135deg, #1e1e1e, #00ffff);
+  transform: scale(1.05);
+}
+
+/* Secciones */
+.seccion {
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid #0062ff; /* Azul neón */
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  z-index: 2;
+  position: relative;
+}
+
+.seccion:hover {
+  background-color: #0062ff; /* Azul neón */
+  border-color: #e24c0c;
+  box-shadow: 0 0 15px rgba(253, 132, 20, 0.897); /* Sombra azul neón */
+}
+
+/* Enlaces */
+.sobre-nosotros a {
+  color: #00ffff; /* Azul neón */
+  text-decoration: none;
+  transition: color 0.3s;
+  z-index: 2;
+  position: relative;
+}
+
+.sobre-nosotros a:hover {
+  color: #ffffff;
+}
+
+/*Fin Sobre nosotros*/
+
+/*Inicio proximos eventos*/
+
+
+ 
+  .evento {
+    background-color: #111010;
+    display: flex;
+    flex-direction: column;
+    align-items: horizontal;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(5, 52, 181);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 25%; /* Ajustar el ancho */
+    height: 200px; /* Ajustar la altura */
+    margin: 50px; /* Añadir margen para separar los cuadros */
+    border: 2px solid #ffffff; /* Borde de neón */
+    position: relative;
+  }
+  
+  .evento:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0916ca; /* Efecto de neón en hover */
+  }
+  
+  .evento img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #ffffff; /* Marco interno para las fotos */
+    border-radius: 10px; /* Bordes redondeados para las fotos */
+  }
+  
+  .info {
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.842);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .evento:hover .info {
+    transform: translateY(0);
+  }
+  
+  .info h2 {
+    margin: 0 0 10px;
+  }
+  
+  .info p {
+    margin: 0;
+  }
+  
+/*Fin Proximos

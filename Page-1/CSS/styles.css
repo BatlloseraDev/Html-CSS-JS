@@ -1,0 +1,169 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(rgb(0,0,0), rgb(50,50,50));
+    color: white;
+    position: sticky;
+    top: 0px;
+    
+}
+
+.navbar
+{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+    margin: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: orange;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 25px;
+    font-size: 200%;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header nav a{
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+header nav a:hover{
+    color: orange;
+}
+
+.underline::after
+{
+    content: '';
+    display:block;
+    width: 0%;
+    height: 4px;
+    background-color: orange;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.underline:hover::after
+{
+    width: 100%;
+}
+
+
+main{
+    grid-area: main;
+    background: rgb(50,50,50);
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+
+
+}
+
+article
+{
+   
+    background: #f0f0f0;
+    
+    text-align: center;
+    border: 1px solid #ccc;
+    width: 32%;
+    height: 32%;
+    
+}
+
+
+.banner{
+    grid-area: banner;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 255, 0);
+}
+.left-aside{
+    grid-area: left-aside;
+}
+footer{
+    grid-area: footer;
+}
+.container{
+    display: grid;
+    grid-template-rows:  auto auto 1fr auto 50px;
+    grid-template-columns: 1fr 4fr 1fr;
+    min-height: 100vh;
+    height: auto;
+    grid-template-areas: 
+        "header         header      header "
+        "left-aside     banner      right-aside"
+        "left-aside     main        right-aside"
+        "footer         footer      footer";
+    gap: 10px;
+    padding: 0px;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+@media(max-width: 768px){
+    .container{
+        grid-template-rows: 50px 50px 50px minmax(1fr,auto)
+        50px 50px ;
+        grid-template-columns: 1fr;
+        min-height: 100vh;
+        grid-template-areas: 
+            "header"
+            "banner"
+            "left-aside"
+            "main"
+            "right-aside"
+            "footer"
+        ;
+       
+    }
+
+    .logo span{
+        font-size: 100%;
+    }
+   
+    article{
+        flex: 1 1 calc(50% -16px);
+    }
+
+}
+
+@media(max-width: 480px)
+{   
+    article{
+        flex: 1 1 90%;
+    }
+
+}
+
